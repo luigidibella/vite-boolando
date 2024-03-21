@@ -1,3 +1,2 @@
-body {
-  background-color: brown;
-}
+@use './partials/general';
+@use './partials/typography';
