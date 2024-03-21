@@ -49,6 +49,7 @@ header{
           text-decoration: none;
           &:hover{
             text-decoration: underline;
+            color: $secondary;
           }
           i:hover{
             color: $secondary;

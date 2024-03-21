@@ -17,10 +17,11 @@
 @use '../assets/scss/partials/variables' as *;
 
 .container{
-  height: calc(100vh - 70px - 80px);
+  height: calc(100vh - 70px - 110px);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px dashed black;
   span{
     color: $bg-header;
   }
