@@ -1,6 +1,26 @@
 <script>
+import {headerMenues} from '../data/menues'
   export default {
+    data(){
+      return{
+        headerMenues,
+      }
+    },
 
+    computed:{
+      mainMenu(){
+        return headerMenues.main
+      },
+      
+      socialMenu(){
+        return headerMenues.social
+      }
+    },
+
+    mounted(){
+      console.log(headerMenues);
+    },
+    
   }
 </script>
 
@@ -9,9 +29,15 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="#">Donna</a></li>
+          <li
+            v-for="(item, index) in mainMenu"
+            :key="`m-${index}`"
+          >
+            <a :href="item.href">{{ item.text }}</a>
+          </li>
+          <!-- <li><a href="#">Donna</a></li>
           <li><a href="#">Uomo</a></li>
-          <li><a href="#">Bambini</a></li>
+          <li><a href="#">Bambini</a></li> -->
         </ul>
       </nav>
       <div class="logo">
@@ -19,9 +45,15 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+          <li
+            v-for="(item, index) in socialMenu"
+            :key="`s-${index}`"
+          >
+            <a :href="item.href" v-html="item.text"></a>
+          </li>
+          <!-- <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
           <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li> -->
         </ul>
       </nav>
     </div>
