@@ -17,9 +17,9 @@ import {headerMenues} from '../data/menues'
       }
     },
 
-    mounted(){
+    /* mounted(){
       console.log(headerMenues);
-    },
+    }, */
     
   }
 </script>
@@ -66,6 +66,10 @@ import {headerMenues} from '../data/menues'
 
 header{
   background-color: $bg-header;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
   .container{
     display: flex;
     justify-content: space-between;
