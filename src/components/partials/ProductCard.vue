@@ -6,7 +6,7 @@
       backImage: String,
       brand: String,
       name: String,
-      price: String,
+      price: Number,
       isInFavorites: Boolean,
       badges: Array,
     },
@@ -21,8 +21,8 @@
 <template>
   <div :id="id" class="card">
     <div class="photo">
-      <img class="photo-2" :src="frontImage" alt="">
-      <img class="photo-1" :src="backImage" alt="">
+      <img class="photo-2" :src="frontImage" :alt="name">
+      <img class="photo-1" :src="backImage" :alt="name">
       <!-- like -->
       <div class="heart" :class="{'liked': isInFavorites}">
         <i class="fa-solid fa-heart"></i>
@@ -44,9 +44,9 @@
     
     <div class="info">
       <h3>{{ brand }}</h3>
-      <h2>{{ name }}</h2>
-      <strong class="sale">{{ price }}</strong> <!-- creare funzione che restituisca "price / 100 * product.badge.value" -->
-      <span class="price">{{ price }}</span>
+      <h2>{{ name.toUpperCase() }}</h2>
+      <strong class="sale">{{ price }}&euro;&nbsp;</strong> <!-- creare funzione che restituisca "price / 100 * product.badge.value" -->
+      <span class="price">{{ price }}&euro;</span>
     </div>
   
   </div>

@@ -13,7 +13,7 @@ import products from '../data/db.json';
     },
 
     mounted() {
-      console.log(this.products);
+      console.log(/* this.products */);
     },
 
   }
@@ -51,6 +51,7 @@ import products from '../data/db.json';
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
   /* align-items: center; */
   /* border: 1px dashed black; */
   span{
